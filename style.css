@@ -1,6 +1,8 @@
 body {
     text-align: center;
     font-family: Arial, sans-serif;
+    background-color: #333; /* Dark grey or black color */
+    color: #fff; /* Text color (white) to contrast with the dark background */
 }
 
 .title {
