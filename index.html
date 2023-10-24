@@ -1,1 +1,21 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Dungeon Delver Idle</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="title">
+        Welcome to Dungeon Delver Idle
+    </div>
+    <button id="play-button" onclick="startGame()">Play</button>
+    <script src="functions.js"></script>
+    <script>
+        function startGame() {
+            window.location.href = "main.html";
+            loadGame();
+        }
+    </script>
+</body>
+</html>
