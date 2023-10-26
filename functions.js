@@ -1,16 +1,36 @@
 
 function createOrLoadCharacter() {
-  // Check if there is a saved character in local storage
-  const savedCharacter = localStorage.getItem('savedCharacter');
+  // Check if there is saved game data in local storage
+  const gameDataJSON = localStorage.getItem('savedGameData');
   
-  if (savedCharacter) {
-    // Load the saved character
-    return JSON.parse(savedCharacter);
+  if (gameDataJSON) {
+    // Parse the JSON string to get the game data object
+    const gameData = JSON.parse(gameDataJSON);
+
+    // Extract character and player data from the game data
+    const character = gameData.character;
+    const playerData = gameData.playerData;
+
+    return { character, playerData };
   } else {
-    // Create a new character
+    // Create a new character if no saved game data is found
     const newCharacter = new Character("NewCharacter", 1, 0, 100, 50, 100, 50);
-    return newCharacter;
+    return { character: newCharacter, playerData: null };
   }
+}
+
+function saveGame(character, playerData) {
+  // Create an object to hold the game data
+  const gameData = {
+    character,
+    playerData,
+  };
+
+  // Convert the game data to a JSON string
+  const gameDataJSON = JSON.stringify(gameData);
+
+  // Store the JSON string in localStorage
+  localStorage.setItem('savedGameData', gameDataJSON);
 }
 
 Character.prototype.incrementGold = function(amount) {
