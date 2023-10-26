@@ -2,20 +2,60 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Welcome to Dungeon Delver Idle</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="functions.js"></script>
+    <title>Dungeon Delver Game</title>
+    <style>
+        body {
+            background-color: #222;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        #game-container {
+            text-align: center;
+        }
+
+        #play-button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 20px 40px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #play-button:hover {
+            background-color: #2980b9;
+        }
+
+
+    </style>
 </head>
 <body>
-    <div class="title">
-        Welcome to Dungeon Delver Idle
+    <div id="game-container">
+        <h1>Welcome to Dungeon Delver</h1>
+        <button id="play-button" onclick="mainMenu()">Play</button>
     </div>
-    <button id="play-button" onclick="startGame()">Play</button>
-    <script src="functions.js"></script>
+
     <script>
-        function startGame() {
-            window.location.href = "main.html";
+        function mainMenu() {
+            // You can add JavaScript logic here to transition to your game.
+            // For now, we'll simply redirect to a placeholder URL.
+            window.location.href = "mainMenu.html";
             loadGame();
+            
         }
     </script>
 </body>
+</html>
+    
+  </body>
 </html>
