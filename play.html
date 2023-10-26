@@ -88,15 +88,15 @@
     <div id="top-bar">
         <div id="status-bars">
             <div class="status-bar" style="width: 100%; background-color: #e74c3c;">Health</div>
-            <div class="status-bar" style="width: 70%; background-color: #3498db;">Mana</div>
-            <div class="status-bar" style="width: 50%; background-color: #f1c40f;">XP</div>
-            <div class="status-bar" style="width: 80%; background-color: #f39c12;">Gold</div>
+            <div class="status-bar" style="width: 100%; background-color: #3498db;">Mana</div>
+            <div class="status-bar" style="width: 100%; background-color: #f1c40f;">XP</div>
+            <div class="status-bar" style="width: 100%; background-color: #f39c12;">Gold</div>
         </div>
         <button id="settings-bar">Settings</button>
     </div>
 
     <div id="game-container">
-        <img id="game-image" src="monster_image.jpg" alt="Monster Image">
+        <img id="game-image" src="monster_image.jpg" alt="Monster">
         <div id="hp-bar" style="width: 50%;"></div>
         <div id="room-counter">Room 1</div>
 
@@ -105,7 +105,15 @@
             <button class="game-button">Items</button>
             <button class="game-button">Companions</button>
             <button class="game-button">Skills</button>
+            <button clas = "game-button" onclick="mainMenu()">Home</button>
         </div>
     </div>
+    <script>
+        function mainMenu() {
+            // Add the logic to start your game here.
+            // For now, we'll just show an alert.
+            window.location.href = "mainMenu.html";
+        }
+    </script>
 </body>
 </html>
